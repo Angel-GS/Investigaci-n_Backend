@@ -1,10 +1,8 @@
-import smtplib  
-import random   
-import time#protocolo de comunicacion para enviar y recibir correos electronicos
+import smtplib  #protocolo de comunicacion para enviar y recibir correos electronicos
 from email.mime.text import MIMEText            #forman el cuerpo del mensaje
 from email.mime.multipart import MIMEMultipart  
+import random 
 import time
-
 class MassiveEmailSender: 
     
     def __init__(self, sender_mail, password): #constructor
@@ -41,16 +39,19 @@ massiveEmailSender = MassiveEmailSender(sender_mail, password)
 receptor = 'raulmirandavargas82@gmail.com'
 
 #cuerpo del correo 
-subjects = ['Publicidad', 'Revisa', 'Spam', 'Ayuda', 'PapaJons'] #lista de asuntos
+subjects = ['Publicidad de descuentos', 'Revición Urgente', 'Recordatorio de pago ', 'Ayuda con el sistema'] #lista de asuntos
 
 message = 'Hola, este es un mensaje de prueba'
 
-#envio de 30 por minuto, durante 10 minutos 
+#envio de 30 por minuto, durante 10 minutos, 300 correos  
 for i in range(300): 
     subject = random.choice(subjects)
-    #un case que verifique el asunto, y personalice el mensaje (Raux)
+    #un case que verifique el asunto, y personalice el mensaje (Raux)(diccionario)
+    
     massiveEmailSender.send_mails(receptor, subject, message)
     time.sleep(6)
+
+
 
 
 
