@@ -1,4 +1,5 @@
 from confluent_kafka import Consumer, KafkaError
+import time, random
 
 # Configuración del consumidor Kafka
 config = {

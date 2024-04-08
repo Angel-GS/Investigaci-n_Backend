@@ -20,7 +20,7 @@ def delivery_report(err, msg):
 
 def produce_messages(topic, messages):
     """ Función para producir mensajes """
-    for index in range(0, 5):
+    for index in range(0, 1):
         for message in messages:
             # Enviar el mensaje al topic
             producer.produce(topic, message.encode('utf-8'), callback=delivery_report)
