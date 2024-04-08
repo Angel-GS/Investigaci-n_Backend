@@ -66,7 +66,7 @@ $ kafka-topics --create --topic <topic_name> --bootstrap-server <bootstrap_serve
 
     - `partitions_number` especifica el número de particiones del tema. Es la forma en que Kafka distribuye los datos dentro del tema para permitir el procesamiento paralelo. Para efectos de esta aplicación: 3.
 
-        - El número depende de la cantidad de suscriptores que existan (consumidores). En caso de ser necesario, se puede utilizar el siguiente comando para escalar verticalmente (hacia arriba o hacia abajo) el número de particiones:```bash
+        - El número depende de la cantidad de suscriptores que existan (consumidores). En caso de ser necesario, se puede utilizar el siguiente comando para escalar verticalmente (hacia arriba o hacia abajo) el número de particiones:
 
 ```bash
 $ kafka-topics --bootstrap-server <bootstrap_server> --alter --topic <topic_name> --partitions <new_partitions_number>
