@@ -44,7 +44,7 @@
 
 # Implementación de Apache Kafca
 
-- Para la implementación de Kafca se creó un servidor Kafka utilizando la herramienta de Docker llamada "Docker-Compose". Esta herramienta se utiliza para definir y gestionar servicios relacionados que necesitan interactuar entre sí, en este caso, se utiliza para definir y gestionar el servicio de Kafka y Zookeeper de la siguiente forma: !["docker-compose.yml"](docker-compose.yml).
+- Para la implementación de Kafca se creó un servidor Kafka utilizando la herramienta de Docker llamada "Docker-Compose". Esta herramienta se utiliza para definir y gestionar servicios relacionados que necesitan interactuar entre sí, en este caso, se utiliza para definir y gestionar el servicio de Kafka y Zookeeper de la siguiente forma: ["docker-compose.yml"](docker-compose.yml).
 
 ## Comandos Utilizados 
 
@@ -52,7 +52,7 @@
 $ docker-compose up -d
 ```
 
-- Se utiliza para crear e iniciar los servicios Zookeeper y Kafka definidos en el archivo !["docker-compose.yml"](docker-compose.yml) en segundo plano.
+- Se utiliza para crear e iniciar los servicios Zookeeper y Kafka definidos en el archivo ["docker-compose.yml"](docker-compose.yml) en segundo plano.
 
 ```bash
 $ kafka-topics --create --topic <topic_name> --bootstrap-server <bootstrap_server> --replication-factor <replications_number> --partitions <partitions_number>
