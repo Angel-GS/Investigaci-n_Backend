@@ -42,13 +42,13 @@
     - API de transmisiones: permite que las aplicaciones se comporten como procesadores de transmisión, que toman un flujo de entrada de un tema y lo transforman en un flujo de salida que abarca diferentes temas de salida.
     - API de conexión: permite a los usuarios automatizar sin problemas la adición de otra aplicación o sistema de datos a sus temas actuales de Kafka.
  
-Obtenido de: ["Apache Kafka"](https://aws.amazon.com/es/what-is/apache-kafka/)
+Obtenido de: [Apache Kafka](https://aws.amazon.com/es/what-is/apache-kafka/)
 
 # Implementación de Apache Kafca
 
-- Para la implementación de Kafca se creó un servidor Kafka utilizando la herramienta de Docker llamada "Docker-Compose". Esta herramienta se utiliza para definir y gestionar servicios relacionados que necesitan interactuar entre sí, en este caso, se utiliza para definir y gestionar el servicio de Kafka y Zookeeper de la siguiente forma: ["docker-compose.yml"](docker-compose.yml).
+- Para la implementación de Kafca se creó un servidor Kafka utilizando la herramienta de Docker llamada "Docker-Compose". Esta herramienta se utiliza para definir y gestionar servicios relacionados que necesitan interactuar entre sí, en este caso, se utiliza para definir y gestionar el servicio de Kafka y Zookeeper de la siguiente forma: [docker-compose.yml](docker-compose.yml).
 
-Obtenido de: ["Kafka con Docker"](https://sacavix.com/2022/02/iniciando-kafka-con-docker/)
+Obtenido de: [Kafka con Docker](https://sacavix.com/2022/02/iniciando-kafka-con-docker/)
 
 ## Comandos Utilizados 
 
