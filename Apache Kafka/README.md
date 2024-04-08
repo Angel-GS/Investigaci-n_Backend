@@ -60,11 +60,11 @@ $ kafka-topics --create --topic <topic_name> --bootstrap-server <bootstrap_serve
 
 - Se utiliza para crear un tema en el servidor Kafka, el cuál permite al productor enviar datos hacia un tema en específico y que hayan varios consumidores (suscriptores) consumiendo y procesando dichos datos. 
 
-    - [bootstrap_server] especifica la lista de servidores que se utilizan para conectarse al clúster de Kafka. Para efectos de esta aplicación: localhost:29092.
+    - `bootstrap_server` especifica la lista de servidores que se utilizan para conectarse al clúster de Kafka. Para efectos de esta aplicación: localhost:29092.
 
-    - [replication_number] indica cuántas copias del tema se mantendrán en el clúster de Kafka para tolerancia a fallos. Para efectos de esta aplicación: 1.
+    - `replication_number` indica cuántas copias del tema se mantendrán en el clúster de Kafka para tolerancia a fallos. Para efectos de esta aplicación: 1.
 
-    - [partitions_number] especifica el número de particiones del tema. Es la forma en que Kafka distribuye los datos dentro del tema para permitir el procesamiento paralelo. Para efectos de esta aplicación: 3.
+    - `partitions_number` especifica el número de particiones del tema. Es la forma en que Kafka distribuye los datos dentro del tema para permitir el procesamiento paralelo. Para efectos de esta aplicación: 3.
 
         - El número depende de la cantidad de suscriptores que existan (consumidores). En caso de ser necesario, se puede utilizar el siguiente comando para escalar verticalmente (hacia arriba o hacia abajo) el número de particiones:```bash
 
