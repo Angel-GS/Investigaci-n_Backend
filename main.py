@@ -39,7 +39,7 @@ massiveEmailSender = MassiveEmailSender(sender_mail, password)
 receptor = 'raulmirandavargas82@gmail.com'
 
 #cuerpo del correo 
-subjects = ['Publicidad de descuentos', 'Revisión Urgente', 'Recordatorio de pago ', 'Ayuda con el sistema'] #lista de asuntos
+subjects = ['Publicidad de descuentos', 'Revisión Urgente', 'Recordatorio de pago', 'Ayuda con el sistema'] #lista de asuntos
 
 
 publicityMessages = ['Buenos días, quería por favor, cancelar mi suscripción a su publicidad',
@@ -60,7 +60,7 @@ systemMessages = ['Buenos días, necesito ayuda con el sistema de su diario, no 
 
 
 #envio de 30 por minuto, durante 10 minutos, 300 correos  
-for i in range(5): 
+for i in range(300): 
     subject = random.choice(subjects)
     #un case que verifique el asunto, y personalice el mensaje (Raux)(diccionario)
     message = ''
