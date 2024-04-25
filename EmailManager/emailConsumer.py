@@ -1,20 +1,21 @@
 from confluent_kafka import Consumer, KafkaError
-import time, random
+import emailManager
+
 
 # Configuración del consumidor Kafka
 config = {
-    'bootstrap.servers': 'localhost:29092',  # Cambiar si es necesario
-    'group.id': 'my_consumer_group',
+    'bootstrap.servers': 'localhost:29092', 
+    'group.id': 'email_consumers',
     'auto.offset.reset': 'earliest'
 }
 
 # Crear el consumidor Kafka
 consumer = Consumer(config)
 
+def consume_emails(topic):
 
-def consume_messages(topic):
-    """ Función para consumir mensajes """
     consumer.subscribe([topic])
+    
     try:
         while True:
             msg = consumer.poll(timeout=1.0)  # Esperar mensajes por un segundo
@@ -26,8 +27,16 @@ def consume_messages(topic):
                 else:
                     print(msg.error())
                     break
-            print(f'Mensaje recibido: {msg.value().decode("utf-8")}')
+            emailManager.processEmail(msg.value())
     except KeyboardInterrupt:
         pass
     finally:
         consumer.close()
+
+
+if __name__ == '__main__':
+    # Especificar el topic del que se consumirán los mensajes
+    topic_name = 'emails'
+
+    # Consumir los mensajes del topic especificado
+    consume_emails(topic_name)

@@ -36,7 +36,7 @@ password = 'syou jgln cixq qfbg'
 #instancia de la clase
 massiveEmailSender = MassiveEmailSender(sender_mail, password)
 #receptor del correo
-receptor = 'raulmirandavargas82@gmail.com'
+receptor = 'angel.leandrosg@gmail.com'
 
 #cuerpo del correo 
 subjects = ['Publicidad de descuentos', 'Revisión Urgente', 'Recordatorio de pago', 'Ayuda con el sistema'] #lista de asuntos

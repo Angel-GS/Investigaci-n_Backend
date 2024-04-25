@@ -3,6 +3,7 @@ import email
 from email.header import decode_header
 import json
 import re
+import emailProducer
 
 class EmailReader:
     def __init__(self, email_address, password):
@@ -71,13 +72,13 @@ class EmailReader:
             
             cleaned_body = self.clean_text(body) # se limpia el cuerpo del correo para que solo quede el texto
 
-            
-            emails.append({  # se agrega el correo a la lista ya  con el formato y ordenado como queremos
-                "Subject": subject,
-                "From": from_address,
-                "To": to_address,
-                "Body": cleaned_body
-            })
+            # se agrega el correo a la lista ya  con el formato y ordenado como queremos
+            emailProducer.produce_emails("emails", json.dumps({  
+                "subject": subject,
+                "sender": from_address,
+                "to": to_address,
+                "message": cleaned_body
+            }))
 
         # Cerrar conexión
         imap.close()
