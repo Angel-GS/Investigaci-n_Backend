@@ -1,4 +1,4 @@
-from consumers.KafkaConsumer import KafkaConsumer
+from services.KafkaConsumer import KafkaConsumer
 from config.config import KAFKA_CONFIG
 
 if __name__ == '__main__':
